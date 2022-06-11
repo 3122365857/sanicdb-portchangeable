@@ -6,8 +6,8 @@ import traceback
 import aiomysql
 import pymysql
 
-version = "0.3"
-version_info = (0, 3, 0, 0)
+version = "0.301"
+version_info = (0, 3, 0, 1)
 
 
 class SanicDB:
@@ -15,6 +15,7 @@ class SanicDB:
     """
     def __init__(self, host, database, user, password,
                  loop=None, sanic=None,
+                 port=3306,
                  minsize=3, maxsize=5,
                  return_dict=True,
                  pool_recycle=7*3600,
@@ -26,6 +27,7 @@ class SanicDB:
         self.db_args = {
             'host': host,
             'db': database,
+            'port': port,
             'user': user,
             'password': password,
             'minsize': minsize,

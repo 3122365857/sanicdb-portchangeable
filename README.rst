@@ -21,3 +21,8 @@ Documentation
 -------------
 
 to check example.py
+
+Add
+-------------
+use example 
+port = 3307 to support mysql server not run on 3306port
